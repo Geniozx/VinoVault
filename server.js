@@ -30,6 +30,7 @@ app.use(
 );
 
 const passUserToView = require('./middleware/pass-user-to-view.js');
+app.use(passUserToView);
 
 app.get('/', (req, res) => {
   res.render('index.ejs', {
