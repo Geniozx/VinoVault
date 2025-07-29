@@ -8,7 +8,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 
 const authController = require('./controllers/auth.js');
-const applicationsController = require('./controllers/applications.js');
+const vinosController = require('./controllers/vinos.js');
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authController);
 const isSignedIn = require('./middleware/is-signed-in.js');
-app.use('/users/:userId/applications', applicationsController);
+app.use('/users/:userId/vinos', vinosController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
