@@ -31,7 +31,7 @@ const wineSchema = mongoose.Schema ({
       'Mourvèdre', 'Brachetto d\'Acqui', 'Primitivo', 'Saperavi', 'Pinotage', 'Montepulciano', 'Ruby Cabernet', 
       'Chardonnay', 'Sauvignon Blanc', 'Riesling', 'Pinot Grigio/Pinot Gris', 'Moscato/Muscat Blanc', 'Pinot Blanc', 
       'Gewürztraminer', 'Viognier', 'Chenin Blanc', 'Albariño', 'Semillon', 'Verdejo', 'Vermentino', 'Grüner Veltliner', 
-      'Torrontés', 'Marsanne', 'Roussane', 'Cortese', 'Arneis', 'Verdejo', 'Assyrtiko', 'Grenache Blanc/Garnacha Blanca', 
+      'Torrontés', 'Marsanne', 'Roussane', 'Cortese', 'Arneis', 'Assyrtiko', 'Grenache Blanc/Garnacha Blanca', 
       'Garganega', 'Fiano', 'White Blend' ],
     required: true
   },
