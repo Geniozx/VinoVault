@@ -6,6 +6,7 @@
   <title>VinoVault</title>
 </head>
 <body>
+  <%- include('../partials/_navbar.ejs') %>
   <% if (user) { %>
     <h1>Welcome to VinoVault, <%= user.username %>!</h1>
     <p>
