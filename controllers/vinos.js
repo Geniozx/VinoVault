@@ -22,7 +22,7 @@ router.get('/new', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        currentUser.wines.push(req.body);
+        currentUser.vinos.push(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/vinos`);
     } catch (error) {
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
 router.get('/vinosId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        const vinos = currentUser.wines.id(req.params.vinosId);
+        const wines = currentUser.wines.id(req.params.vinosId);
         res.render('vinos/show.ejs', {
             vinos: wines
         });
@@ -44,7 +44,29 @@ router.get('/vinosId', async (req, res) => {
     }
 });
 
+router.delete('/:vinosId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        currentUser.vinos.id(req.params.vinosId).deleteOne();
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/vinos`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
 
-
+router.get('/:vinosId/edit', async (req, res) => {
+    try { 
+        const currentUser = await User.findById(req.session.user._id);
+        const wines = currentUser.vinos.id(req.params.vinosId);
+        res.render('vinos/edit.ejs', {
+              vinos: wines
+        })
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+})
 
 module.exports = router;

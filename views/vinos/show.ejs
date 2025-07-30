@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= wines.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= wines.name %> <%= wines.year %></h1>
+    <p><%= wines.winery %>, <%= wines.category %>.</p>
+    <p><%= wines.type %>, Region: <%= wines.region %></p>
+    <p>Rating: <%= wines.rating %></p>
+    <% if (wines.notes) { %> 
+        <p> Notes <%= wines.notes %></p> 
+        <% } %>
+    <p> Flavor Prolfile: <%= wines.flavorProfile %></p>
+    <a href="/users/<%= user._id %>/vinos/<%= vinos._id %>/edit">
+      Edit this application
+    </a>
+    <form action="/users/<%= user._id %>/vinos/<%= vinos._id %>?_method=DELETE"
+      method="POST">
+      <button type="submit">Delete this application</button>
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
