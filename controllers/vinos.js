@@ -67,6 +67,19 @@ router.get('/:vinosId/edit', async (req, res) => {
         console.log(error);
         res.redirect('/');
     }
-})
+});
+
+router.put('/:vinosId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const wines = currentUser.vinos.id(req.params.vinosId);
+        wines.set(req.body);
+        await currentUser.save();
+        res.redirect(`/users/${currentUser._id}/vinos/${req.params.vinosId}`);
+    } catch (error) {
+        console.log(error);
+        res.redirect('/')
+    }
+});
 
 module.exports = router;
