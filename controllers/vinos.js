@@ -31,6 +31,20 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/vinosId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const vinos = currentUser.wines.id(req.params.vinosId);
+        res.render('vinos/show.ejs', {
+            vinos: wines
+        });
+    } catch (error) {
+        console.log(error);
+        res.redirect('/')
+    }
+});
+
+
 
 
 module.exports = router;
