@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const wineSchema = mongoose.Schema ({
+const vinosSchema = mongoose.Schema ({
   name: {
     type: String,
     required: true,
@@ -19,7 +19,7 @@ const wineSchema = mongoose.Schema ({
     required: true,
   },
   year: {
-    type: Date,
+    type: Number,
     required: true,
   },
   category: {
@@ -60,7 +60,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  wines: [wineSchema],
+  wines: [vinosSchema],
 });
 
 const User = mongoose.model('User', userSchema);

@@ -8,7 +8,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Wine</h1>
-    <form action="/users/<%= user._id %>/vinos" method="POST"></form>
+    <form action="/users/<%= user._id %>/vinos" method="POST">
     <label for="name">Wine Name</label>
     <input type="text" name="name" id="name" />
 
@@ -22,12 +22,13 @@
     <select id="type" name="type">
         <option value="Red">Red</option>
         <option value="White">White</option>
+        </select>
 
 
     <label for="year" >Year</label>
-    <input type="text" name="year" id="year">
+    <input type="number" name="year" id="year" min="1200" max="2500">
 
-    <label for="category" >Category</label>
+    <label for="category">Category</label>
     <select id="category" name="category">
         <option value="Albariño">Albariño</option>
         <option value="Alicante Henri Bouschet">Alicante Henri Bouschet</option>
@@ -35,69 +36,110 @@
         <option value="Assyrtiko">Assyrtiko</option>
         <option value="Banyus">Banyus</option>
         <option value="Barbera">Barbera</option>
+        <option value="Bobal">Bobal</option>
         <option value="Brachetto d'Acqui">Brachetto d'Acqui</option>
         <option value="Cabernet Franc">Cabernet Franc</option>
         <option value="Cabernet Sauvignon">Cabernet Sauvignon</option>
-        <option value="Carigan">Carignan</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+        <option value="Carignan">Carignan</option>
+        <option value="Carmenere">Carmenere</option>
+        <option value="Chardonnay">Chardonnay</option>
+        <option value="Chenin Blanc">Chenin Blanc</option>
+        <option value="Cisnaut">Cisnaut</option>
+        <option value="Cortese">Cortese</option>
+        <option value="Dolcetto">Dolcetto</option>
+        <option value="Fiano">Fiano</option>
+        <option value="Gamay">Gamay</option>
+        <option value="Garganega">Garganega</option>
+        <option value="Gewürztraminer">Gewürztraminer</option>
+        <option value="Grenache">Grenache</option>
+        <option value="Grenache Blanc/Garnacha Blanca">Grenache Blanc/Garnacha Blanca</option>
+        <option value="Grüner Veltliner">Grüner Veltliner</option>
+        <option value="Lambrusco">Lambrusco</option>
+        <option value="Malbec">Malbec</option>
+        <option value="Marsanne">Marsanne</option>
+        <option value="Montepulciano">Montepulciano</option>
+        <option value="Moscato/Muscat Blanc">Moscato/Muscat Blanc</option>
+        <option value="Mourvèdre">Mourvèdre</option>
+        <option value="Nebbiolo">Nebbiolo</option>
+        <option value="Nero d'Avola">Nero d'Avola</option>
+        <option value="Pinot Blanc">Pinot Blanc</option>
+        <option value="Pinot Grigio/Pinot Gris">Pinot Grigio/Pinot Gris</option>
+        <option value="Pinot Nior">Pinot Nior</option>
+        <option value="Pinotage">Pinotage</option>
+        <option value="Port">Port</option>
+        <option value="Primitivo">Primitivo</option>
+        <option value="Red Blends">Red Blends</option>
+        <option value="Recioto Della Valpolicella">Recioto Della Valpolicella</option>
+        <option value="Riesling">Riesling</option>
+        <option value="Roussane">Roussane</option>
+        <option value="Ruby Cabernet">Ruby Cabernet</option>
+        <option value="Sangiovese">Sangiovese</option>
+        <option value="Saperavi">Saperavi</option>
+        <option value="Sauvignon Blanc">Sauvignon Blanc</option>
+        <option value="Semillon">Semillon</option>
+        <option value="Shiraz">Shiraz</option>
+        <option value="Syrah">Syrah</option>
+        <option value="Tempranillo">Tempranillo</option>
+        <option value="Torrontés">Torrontés</option>
+        <option value="Verdejo">Verdejo</option>
+        <option value="Vermentino">Vermentino</option>
+        <option value="Viognier">Viognier</option>
+        <option value="Vin Santo">Vin Santo</option>
+        <option value="White Blend">White Blend</option>
+        <option value="Zinfandel">Zinfandel</option>
+    </select>
+
 
     <label for="rating" >Rating</label>
-    <input type="number">
+    <input type="number" id="rating" name="rating" min="1" max="5" step="1">
 
-    <label for="flavorProfile" >Flavor Profile</label>
-    <input type="">
+    <label for="flavorProfile">Flavor Profile</label>
+    <select id="flavorProfile" name="flavorProfile">
+        <option value="Acidic">Acidic</option>
+        <option value="Bitter">Bitter</option>
+        <option value="Black Fruits">Black Fruits</option>
+        <option value="Black Pepper">Black Pepper</option>
+        <option value="Buttery">Buttery</option>
+        <option value="Cinnamon">Cinnamon</option>
+        <option value="Clove">Clove</option>
+        <option value="Crisp">Crisp</option>
+        <option value="Dry">Dry</option>
+        <option value="Earthy">Earthy</option>
+        <option value="Fruity">Fruity</option>
+        <option value="Full-Body">Full-Body</option>
+        <option value="Herbal">Herbal</option>
+        <option value="Honeysuckle">Honeysuckle</option>
+        <option value="Leather">Leather</option>
+        <option value="Light-Body">Light-Body</option>
+        <option value="Medium-Body">Medium-Body</option>
+        <option value="Mushroom">Mushroom</option>
+        <option value="Nutty">Nutty</option>
+        <option value="Pome Fruits">Pome Fruits</option>
+        <option value="Red Fruits">Red Fruits</option>
+        <option value="Rose">Rose</option>
+        <option value="Smoky/Burnt">Smoky/Burnt</option>
+        <option value="Smooth">Smooth</option>
+        <option value="Soft">Soft</option>
+        <option value="Spicy">Spicy</option>
+        <option value="Stone Fruits">Stone Fruits</option>
+        <option value="Sweet">Sweet</option>
+        <option value="Tart">Tart</option>
+        <option value="Tobacco">Tobacco</option>
+        <option value="Tropical Fruits">Tropical Fruits</option>
+        <option value="Vegetative">Vegetative</option>
+        <option value="Violet">Violet</option>
+        <option value="Wet Stone">Wet Stone</option>
+        <option value="White Flowers">White Flowers</option>
+        <option value="Wildflowers">Wildflowers</option>
+        <option value="Woody">Woody</option>
+    </select>
+
+        
 
     <label for="notes" >Notes</label>
     <textarea name="notes" id="notes"></textarea>
 
     <button type="submit">Add Wine</button>
+</form>
   </body>
 </html>
