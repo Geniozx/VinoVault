@@ -7,7 +7,8 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Create your VinoVault!</h1>
+  <div class="signup-container">
+  <h1>Create your VinoVault</h1>
   <form action="/auth/sign-up" method="POST">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required />
@@ -22,5 +23,6 @@
     />
     <button type="submit">Sign up</button>
   </form>
+</div>
 </body>
 </html>
