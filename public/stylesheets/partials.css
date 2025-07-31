@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -8,6 +10,7 @@
 }
 
 #nav-header {
+    font-family: 'Pacifico' sans-serif;
     color: #2c9844;
     size: 1em !important;
     margin: 0;
