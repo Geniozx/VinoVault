@@ -10,10 +10,12 @@
     <h1>VinoVault</h1>
     <a href="/users/<%= user._id %>/vinos/new">Add a New Wine</a>
     <ul>
-<% vinos.forEach((wines)=>{ %>
-<a href="/users/<%= user._id %>/vinos/<%= vinos._id %>"><li><%= wines.name %> <%= wines.year %></a>, <%= wines.winery %>, <%= wines.category %>. 
-  <%= wines.type %>, Region: <%= wines.region %>, Rating: <%= wines.rating %>, Notes <%= wines.notes %>, 
-  Flavor Prolfile: <%= wines.flavorProfile %></li>
+<% wines.forEach((wine)=>{ %>
+  
+<a href="/users/<%= user._id %>/vinos/<%= wine._id %>"><li><%= wine.name %> <%= wine.year %></a>, 
+  <%= wine.winery %>, <%= wine.category %>. 
+  <%= wine.type %>, Region: <%= wine.region %>, Rating: <%= wine.rating %>, Notes <%= wine.notes %>, 
+  Flavor Profile: <%= wine.flavorProfile %>
 <% }) %>
     </ul>
   </body>

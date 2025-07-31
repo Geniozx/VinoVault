@@ -10,7 +10,7 @@ const session = require('express-session');
 const authController = require('./controllers/auth.js');
 const vinosController = require('./controllers/vinos.js');
 
-const port = process.env.PORT ? process.env.PORT : '3000';
+const port = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -20,7 +20,7 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -35,16 +35,9 @@ app.use(passUserToView);
 app.get('/', (req, res) => {
   res.render('index.ejs', {
     user: req.session.user,
+    vinos: [],
   });
 });
-
-// app.get('/vip-lounge', (req, res) => {
-//   if (req.session.user) {
-//     res.send(`Welcome to the party ${req.session.user.username}.`);
-//   } else {
-//     res.send('Sorry, no guests allowed.');
-//   }
-// });
 
 app.use('/auth', authController);
 const isSignedIn = require('./middleware/is-signed-in.js');
@@ -53,3 +46,10 @@ app.use('/users/:userId/vinos', vinosController);
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
+// app.get('/vip-lounge', (req, res) => {
+//   if (req.session.user) {
+//     res.send(`Welcome to the party ${req.session.user.username}.`);
+//   } else {
+//     res.send('Sorry, no guests allowed.');
+//   }
+// });

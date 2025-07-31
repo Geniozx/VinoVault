@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
         res.render('vinos/index.ejs', {
-            vinos: currentUser.wines,
+            wines: currentUser.wines,
         });
     } catch (error) {
         console.log(error);
@@ -22,7 +22,7 @@ router.get('/new', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        currentUser.vinos.push(req.body);
+        currentUser.wines.push(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/vinos`);
     } catch (error) {
@@ -31,12 +31,12 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.get('/vinosId', async (req, res) => {
+router.get('/:vinosId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        const wines = currentUser.wines.id(req.params.vinosId);
+        const wine = currentUser.wines.id(req.params.vinosId);
         res.render('vinos/show.ejs', {
-            vinos: wines
+            vinos: wine,
         });
     } catch (error) {
         console.log(error);
@@ -47,7 +47,7 @@ router.get('/vinosId', async (req, res) => {
 router.delete('/:vinosId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        currentUser.vinos.id(req.params.vinosId).deleteOne();
+        currentUser.wines.id(req.params.vinosId).deleteOne();
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/vinos`);
     } catch (error) {
@@ -59,9 +59,9 @@ router.delete('/:vinosId', async (req, res) => {
 router.get('/:vinosId/edit', async (req, res) => {
     try { 
         const currentUser = await User.findById(req.session.user._id);
-        const wines = currentUser.vinos.id(req.params.vinosId);
+        const wine = currentUser.wines.id(req.params.vinosId);
         res.render('vinos/edit.ejs', {
-              vinos: wines
+              vinos: wine,
         })
     } catch (error) {
         console.log(error);
@@ -72,8 +72,8 @@ router.get('/:vinosId/edit', async (req, res) => {
 router.put('/:vinosId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        const wines = currentUser.vinos.id(req.params.vinosId);
-        wines.set(req.body);
+        const vinos = currentUser.wines.id(req.params.vinosId);
+        vinos.set(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/vinos/${req.params.vinosId}`);
     } catch (error) {

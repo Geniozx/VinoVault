@@ -3,140 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit <%= wines.name %></title>
+    <title>Edit <%= vinos.name %></title>
   </head>
-  <body>
+<body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit <%= wines.name %> <%= wines.year %></h1>
-    <form action="/users/<%= user._id %>/vinos/<%= vinos._id %>"?_method="PUT" method="POST">
+    <h1>Edit <%= vinos.name %> <%= vinos.year %></h1>
+    <form action="/users/<%= user._id %>/vinos/<%= vinos._id %>?_method=PUT" method="POST">
     <label for="name">Wine Name</label>
-    <input type="text" name="name" id="name" value="<%= wines.name %>" />
+    <input type="text" name="name" id="name" value="<%= vinos.name %>" />
 
     <label for="winery" >Winery</label>
-    <input type="text" name="winery" id="winery" value="<%= wines.winery %>">
+    <input type="text" name="winery" id="winery" value="<%= vinos.winery %>">
 
     <label for="region" >Region</label>
-    <input type="text" name="region" id="region" value="<%= wines.region %>">
+    <input type="text" name="region" id="region" value="<%= vinos.region %>">
 
     <label for="type" >Type of Wine</label>
     <select id="type" name="type">
-        <option value="Red" <%= wines.type === 'Red' ? 'Red' : '' %>>Red</option>
-        <option value="White" <%= wines.type === 'White' ? 'White' : '' %>>White</option>
-        </select>
+            <option value="Red" <%= vinos.type === 'Red' ? 'selected' : '' %>>Red</option>
+            <option value="White" <%= vinos.type === 'White' ? 'selected' : '' %>>White</option>
+            </select>
 
 
     <label for="year" >Year</label>
-    <input type="number" name="year" id="year" min="1200" max="2500" value="<%= wines.year %>">
+    <input type="number" name="year" id="year" min="1200" max="2500" value="<%= vinos.year %>">
 
     <label for="category">Category</label>
     <select id="category" name="category">
-        <option value="Albariño" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Albariño</option>
-        <option value="Alicante Henri Bouschet" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Alicante Henri Bouschet</option>
-        <option value="Arneis" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Arneis</option>
-        <option value="Assyrtiko" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Assyrtiko</option>
-        <option value="Banyus" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Banyus</option>
-        <option value="Barbera" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Barbera</option>
-        <option value="Bobal" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Bobal</option>
-        <option value="Brachetto d'Acqui" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Brachetto d'Acqui</option>
-        <option value="Cabernet Franc" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Cabernet Franc</option>
-        <option value="Cabernet Sauvignon" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Cabernet Sauvignon</option>
-        <option value="Carignan" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Carignan</option>
-        <option value="Carmenere" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Carmenere</option>
-        <option value="Chardonnay" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Chardonnay</option>
-        <option value="Chenin Blanc" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Chenin Blanc</option>
-        <option value="Cisnaut" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Cisnaut</option>
-        <option value="Cortese" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Cortese</option>
-        <option value="Dolcetto" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Dolcetto</option>
-        <option value="Fiano" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Fiano</option>
-        <option value="Gamay" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Gamay</option>
-        <option value="Garganega" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Garganega</option>
-        <option value="Gewürztraminer" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Gewürztraminer</option>
-        <option value="Grenache" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Grenache</option>
-        <option value="Grenache Blanc/Garnacha Blanca" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Grenache Blanc/Garnacha Blanca</option>
-        <option value="Grüner Veltliner" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Grüner Veltliner</option>
-        <option value="Lambrusco" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Lambrusco</option>
-        <option value="Malbec" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Malbec</option>
-        <option value="Marsanne" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Marsanne</option>
-        <option value="Montepulciano" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Montepulciano</option>
-        <option value="Moscato/Muscat Blanc" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Moscato/Muscat Blanc</option>
-        <option value="Mourvèdre" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Mourvèdre</option>
-        <option value="Nebbiolo" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Nebbiolo</option>
-        <option value="Nero d'Avola" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Nero d'Avola</option>
-        <option value="Pinot Blanc" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Pinot Blanc</option>
-        <option value="Pinot Grigio/Pinot Gris" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Pinot Grigio/Pinot Gris</option>
-        <option value="Pinot Nior" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Pinot Nior</option>
-        <option value="Pinotage" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Pinotage</option>
-        <option value="Port" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Port</option>
-        <option value="Primitivo" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Primitivo</option>
-        <option value="Red Blends" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Red Blends</option>
-        <option value="Recioto Della Valpolicella" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Recioto Della Valpolicella</option>
-        <option value="Riesling" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Riesling</option>
-        <option value="Roussane" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Roussane</option>
-        <option value="Ruby Cabernet" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Ruby Cabernet</option>
-        <option value="Sangiovese" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Sangiovese</option>
-        <option value="Saperavi" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Saperavi</option>
-        <option value="Sauvignon Blanc" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Sauvignon Blanc</option>
-        <option value="Semillon" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Semillon</option>
-        <option value="Shiraz" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Shiraz</option>
-        <option value="Syrah" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Syrah</option>
-        <option value="Tempranillo" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Tempranillo</option>
-        <option value="Torrontés" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Torrontés</option>
-        <option value="Verdejo" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Verdejo</option>
-        <option value="Vermentino" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Vermentino</option>
-        <option value="Viognier" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Viognier</option>
-        <option value="Vin Santo" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Vin Santo</option>
-        <option value="White Blend" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>White Blend</option>
-        <option value="Zinfandel" <%= wines.category === 'Albariño' ? 'Albariño' : '' %>>Zinfandel</option>
+            <option value="Albariño" <%= vinos.category === 'Albariño' ? 'selected' : '' %>>Albariño</option>
+            <option value="Alicante Henri Bouschet" <%= vinos.category === 'Alicante Henri Bouschet' ? 'selected' : '' %>>Alicante Henri Bouschet</option>
+            <option value="Arneis" <%= vinos.category === 'Arneis' ? 'selected' : '' %>>Arneis</option>
+            <option value="Assyrtiko" <%= vinos.category === 'Assyrtiko' ? 'selected' : '' %>>Assyrtiko</option>
+            <option value="Banyus" <%= vinos.category === 'Banyus' ? 'selected' : '' %>>Banyus</option>
+            <option value="Barbera" <%= vinos.category === 'Barbera' ? 'selected' : '' %>>Barbera</option>
+            <option value="Bobal" <%= vinos.category === 'Bobal' ? 'selected' : '' %>>Bobal</option>
+            <option value="Brachetto d'Acqui" <%= vinos.category === "Brachetto d'Acqui" ? 'selected' : '' %>>Brachetto d'Acqui</option>
+            <option value="Cabernet Franc" <%= vinos.category === 'Cabernet Franc' ? 'selected' : '' %>>Cabernet Franc</option>
+            <option value="Cabernet Sauvignon" <%= vinos.category === 'Cabernet Sauvignon' ? 'selected' : '' %>>Cabernet Sauvignon</option>
+            <option value="Carignan" <%= vinos.category === 'Carignan' ? 'selected' : '' %>>Carignan</option>
+            <option value="Carmenere" <%= vinos.category === 'Carmenere' ? 'selected' : '' %>>Carmenere</option>
+            <option value="Chardonnay" <%= vinos.category === 'Chardonnay' ? 'selected' : '' %>>Chardonnay</option>
+            <option value="Chenin Blanc" <%= vinos.category === 'Chenin Blanc' ? 'selected' : '' %>>Chenin Blanc</option>
+            <option value="Cisnault" <%= vinos.category === 'Cisnault' ? 'selected' : '' %>>Cinsault</option>
+            <option value="Cortese" <%= vinos.category === 'Cortese' ? 'selected' : '' %>>Cortese</option>
+            <option value="Dolcetto" <%= vinos.category === 'Dolcetto' ? 'selected' : '' %>>Dolcetto</option>
+            <option value="Fiano" <%= vinos.category === 'Fiano' ? 'selected' : '' %>>Fiano</option>
+            <option value="Gamay" <%= vinos.category === 'Gamay' ? 'selected' : '' %>>Gamay</option>
+            <option value="Garganega" <%= vinos.category === 'Garganega' ? 'selected' : '' %>>Garganega</option>
+            <option value="Gewürztraminer" <%= vinos.category === 'Gewürztraminer' ? 'selected' : '' %>>Gewürztraminer</option>
+            <option value="Grenache" <%= vinos.category === 'Grenache' ? 'selected' : '' %>>Grenache</option>
+            <option value="Grenache Blanc/Garnacha Blanca" <%= vinos.category === 'Grenache Blanc/Garnacha Blanca' ? 'selected' : '' %>>Grenache Blanc/Garnacha Blanca</option>
+            <option value="Grüner Veltliner" <%= vinos.category === 'Grüner Veltliner' ? 'selected' : '' %>>Grüner Veltliner</option>
+            <option value="Lambrusco" <%= vinos.category === 'Lambrusco' ? 'selected' : '' %>>Lambrusco</option>
+            <option value="Malbec" <%= vinos.category === 'Malbec' ? 'selected' : '' %>>Malbec</option>
+            <option value="Marsanne" <%= vinos.category === 'Marsanne' ? 'selected' : '' %>>Marsanne</option>
+            <option value="Montepulciano" <%= vinos.category === 'Montepulciano' ? 'selected' : '' %>>Montepulciano</option>
+            <option value="Moscato/Muscat Blanc" <%= vinos.category === 'Moscato/Muscat Blanc' ? 'selected' : '' %>>Moscato/Muscat Blanc</option>
+            <option value="Mourvèdre" <%= vinos.category === 'Mourvèdre' ? 'selected' : '' %>>Mourvèdre</option>
+            <option value="Nebbiolo" <%= vinos.category === 'Nebbiolo' ? 'selected' : '' %>>Nebbiolo</option>
+            <option value="Nero d'Avola" <%= vinos.category === "Nero d'Avola" ? 'selected' : '' %>>Nero d'Avola</option>
+            <option value="Pinot Blanc" <%= vinos.category === 'Pinot Blanc' ? 'selected' : '' %>>Pinot Blanc</option>
+            <option value="Pinot Grigio/Pinot Gris" <%= vinos.category === 'Pinot Grigio/Pinot Gris' ? 'selected' : '' %>>Pinot Grigio/Pinot Gris</option>
+            <option value="Pinot Noir" <%= vinos.category === 'Pinot Noir' ? 'selected' : '' %>>Pinot Noir</option>
+            <option value="Pinotage" <%= vinos.category === 'Pinotage' ? 'selected' : '' %>>Pinotage</option>
+            <option value="Port" <%= vinos.category === 'Port' ? 'selected' : '' %>>Port</option>
+            <option value="Primitivo" <%= vinos.category === 'Primitivo' ? 'selected' : '' %>>Primitivo</option>
+            <option value="Red Blends" <%= vinos.category === 'Red Blends' ? 'selected' : '' %>>Red Blends</option>
+            <option value="Recioto Della Valpolicella" <%= vinos.category === 'Recioto Della Valpolicella' ? 'selected' : '' %>>Recioto Della Valpolicella</option>
+            <option value="Riesling" <%= vinos.category === 'Riesling' ? 'selected' : '' %>>Riesling</option>
+            <option value="Roussanne" <%= vinos.category === 'Roussanne' ? 'selected' : '' %>>Roussanne</option>
+            <option value="Ruby Cabernet" <%= vinos.category === 'Ruby Cabernet' ? 'selected' : '' %>>Ruby Cabernet</option>
+            <option value="Sangiovese" <%= vinos.category === 'Sangiovese' ? 'selected' : '' %>>Sangiovese</option>
+            <option value="Saperavi" <%= vinos.category === 'Saperavi' ? 'selected' : '' %>>Saperavi</option>
+            <option value="Sauvignon Blanc" <%= vinos.category === 'Sauvignon Blanc' ? 'selected' : '' %>>Sauvignon Blanc</option>
+            <option value="Semillon" <%= vinos.category === 'Semillon' ? 'selected' : '' %>>Semillon</option>
+            <option value="Shiraz" <%= vinos.category === 'Shiraz' ? 'selected' : '' %>>Shiraz</option>
+            <option value="Syrah" <%= vinos.category === 'Syrah' ? 'selected' : '' %>>Syrah</option>
+            <option value="Tempranillo" <%= vinos.category === 'Tempranillo' ? 'selected' : '' %>>Tempranillo</option>
+            <option value="Torrontés" <%= vinos.category === 'Torrontés' ? 'selected' : '' %>>Torrontés</option>
+            <option value="Verdejo" <%= vinos.category === 'Verdejo' ? 'selected' : '' %>>Verdejo</option>
+            <option value="Vermentino" <%= vinos.category === 'Vermentino' ? 'selected' : '' %>>Vermentino</option>
+            <option value="Viognier" <%= vinos.category === 'Viognier' ? 'selected' : '' %>>Viognier</option>
+            <option value="Vin Santo" <%= vinos.category === 'Vin Santo' ? 'selected' : '' %>>Vin Santo</option>
+            <option value="White Blend" <%= vinos.category === 'White Blend' ? 'selected' : '' %>>White Blend</option>
+            <option value="Zinfandel" <%= vinos.category === 'Zinfandel' ? 'selected' : '' %>>Zinfandel</option>
     </select>
 
 
     <label for="rating" >Rating</label>
-    <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="<%= wines.rating %>">
+    <input type="number" id="rating" name="rating" min="1" max="5" step="1" value="<%= vinos.rating %>">
 
     <label for="flavorProfile">Flavor Profile</label>
     <select id="flavorProfile" name="flavorProfile">
-        <option value="Acidic" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Acidic</option>
-        <option value="Bitter" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Bitter</option>
-        <option value="Black Fruits" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Black Fruits</option>
-        <option value="Black Pepper" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Black Pepper</option>
-        <option value="Buttery" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Buttery</option>
-        <option value="Cinnamon" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Cinnamon</option>
-        <option value="Clove" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Clove</option>
-        <option value="Crisp" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Crisp</option>
-        <option value="Dry" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Dry</option>
-        <option value="Earthy" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Earthy</option>
-        <option value="Fruity" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Fruity</option>
-        <option value="Full-Body" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Full-Body</option>
-        <option value="Herbal" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Herbal</option>
-        <option value="Honeysuckle" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Honeysuckle</option>
-        <option value="Leather" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Leather</option>
-        <option value="Light-Body" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Light-Body</option>
-        <option value="Medium-Body" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Medium-Body</option>
-        <option value="Mushroom" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Mushroom</option>
-        <option value="Nutty" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Nutty</option>
-        <option value="Pome Fruits" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Pome Fruits</option>
-        <option value="Red Fruits" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Red Fruits</option>
-        <option value="Rose" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Rose</option>
-        <option value="Smoky/Burnt" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Smoky/Burnt</option>
-        <option value="Smooth" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Smooth</option>
-        <option value="Soft" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Soft</option>
-        <option value="Spicy" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Spicy</option>
-        <option value="Stone Fruits" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Stone Fruits</option>
-        <option value="Sweet" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Sweet</option>
-        <option value="Tart" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Tart</option>
-        <option value="Tobacco" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Tobacco</option>
-        <option value="Tropical Fruits" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Tropical Fruits</option>
-        <option value="Vegetative" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Vegetative</option>
-        <option value="Violet" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Violet</option>
-        <option value="Wet Stone" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Wet Stone</option>
-        <option value="White Flowers" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>White Flowers</option>
-        <option value="Wildflowers" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Wildflowers</option>
-        <option value="Woody" <%= wines.flavorProfile === 'Acidic' ? 'Acidic' : '' %>>Woody</option>
+            <option value="Acidic" <%= vinos.flavorProfile === 'Acidic' ? 'selected' : '' %>>Acidic</option>
+            <option value="Bitter" <%= vinos.flavorProfile === 'Bitter' ? 'selected' : '' %>>Bitter</option>
+            <option value="Black Fruits" <%= vinos.flavorProfile === 'Black Fruits' ? 'selected' : '' %>>Black Fruits</option>
+            <option value="Black Pepper" <%= vinos.flavorProfile === 'Black Pepper' ? 'selected' : '' %>>Black Pepper</option>
+            <option value="Buttery" <%= vinos.flavorProfile === 'Buttery' ? 'selected' : '' %>>Buttery</option>
+            <option value="Cinnamon" <%= vinos.flavorProfile === 'Cinnamon' ? 'selected' : '' %>>Cinnamon</option>
+            <option value="Clove" <%= vinos.flavorProfile === 'Clove' ? 'selected' : '' %>>Clove</option>
+            <option value="Crisp" <%= vinos.flavorProfile === 'Crisp' ? 'selected' : '' %>>Crisp</option>
+            <option value="Dry" <%= vinos.flavorProfile === 'Dry' ? 'selected' : '' %>>Dry</option>
+            <option value="Earthy" <%= vinos.flavorProfile === 'Earthy' ? 'selected' : '' %>>Earthy</option>
+            <option value="Fruity" <%= vinos.flavorProfile === 'Fruity' ? 'selected' : '' %>>Fruity</option>
+            <option value="Full-Body" <%= vinos.flavorProfile === 'Full-Body' ? 'selected' : '' %>>Full-Body</option>
+            <option value="Herbal" <%= vinos.flavorProfile === 'Herbal' ? 'selected' : '' %>>Herbal</option>
+            <option value="Honeysuckle" <%= vinos.flavorProfile === 'Honeysuckle' ? 'selected' : '' %>>Honeysuckle</option>
+            <option value="Leather" <%= vinos.flavorProfile === 'Leather' ? 'selected' : '' %>>Leather</option>
+            <option value="Light-Body" <%= vinos.flavorProfile === 'Light-Body' ? 'selected' : '' %>>Light-Body</option>
+            <option value="Medium-Body" <%= vinos.flavorProfile === 'Medium-Body' ? 'selected' : '' %>>Medium-Body</option>
+            <option value="Mushroom" <%= vinos.flavorProfile === 'Mushroom' ? 'selected' : '' %>>Mushroom</option>
+            <option value="Nutty" <%= vinos.flavorProfile === 'Nutty' ? 'selected' : '' %>>Nutty</option>
+            <option value="Pome Fruits" <%= vinos.flavorProfile === 'Pome Fruits' ? 'selected' : '' %>>Pome Fruits</option>
+            <option value="Red Fruits" <%= vinos.flavorProfile === 'Red Fruits' ? 'selected' : '' %>>Red Fruits</option>
+            <option value="Rose" <%= vinos.flavorProfile === 'Rose' ? 'selected' : '' %>>Rose</option>
+            <option value="Smoky/Burnt" <%= vinos.flavorProfile === 'Smoky/Burnt' ? 'selected' : '' %>>Smoky/Burnt</option>
+            <option value="Smooth" <%= vinos.flavorProfile === 'Smooth' ? 'selected' : '' %>>Smooth</option>
+            <option value="Soft" <%= vinos.flavorProfile === 'Soft' ? 'selected' : '' %>>Soft</option>
+            <option value="Spicy" <%= vinos.flavorProfile === 'Spicy' ? 'selected' : '' %>>Spicy</option>
+            <option value="Stone Fruits" <%= vinos.flavorProfile === 'Stone Fruits' ? 'selected' : '' %>>Stone Fruits</option>
+            <option value="Sweet" <%= vinos.flavorProfile === 'Sweet' ? 'selected' : '' %>>Sweet</option>
+            <option value="Tart" <%= vinos.flavorProfile === 'Tart' ? 'selected' : '' %>>Tart</option>
+            <option value="Tobacco" <%= vinos.flavorProfile === 'Tobacco' ? 'selected' : '' %>>Tobacco</option>
+            <option value="Tropical Fruits" <%= vinos.flavorProfile === 'Tropical Fruits' ? 'selected' : '' %>>Tropical Fruits</option>
+            <option value="Vegetative" <%= vinos.flavorProfile === 'Vegetative' ? 'selected' : '' %>>Vegetative</option>
+            <option value="Violet" <%= vinos.flavorProfile === 'Violet' ? 'selected' : '' %>>Violet</option>
+            <option value="Wet Stone" <%= vinos.flavorProfile === 'Wet Stone' ? 'selected' : '' %>>Wet Stone</option>
+            <option value="White Flowers" <%= vinos.flavorProfile === 'White Flowers' ? 'selected' : '' %>>White Flowers</option>
+            <option value="Wildflowers" <%= vinos.flavorProfile === 'Wildflowers' ? 'selected' : '' %>>Wildflowers</option>
+            <option value="Woody" <%= vinos.flavorProfile === 'Woody' ? 'selected' : '' %>>Woody</option>
     </select>
      
 
     <label for="notes" >Notes</label>
-    <textarea name="notes" id="notes" value="<%= wines.notes %>"></textarea>
+    <textarea name="notes" id="notes"><%= vinos.notes %></textarea>
 
     <button type="submit">Edit Wine</button>
 </form>

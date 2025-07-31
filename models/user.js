@@ -24,14 +24,14 @@ const vinosSchema = mongoose.Schema ({
   },
   category: {
     type: String,
-    enum: ['Cabernet Sauvignon', 'Merlot', 'Pinot Nior', 'Shiraz', 'Malbec', 
+    enum: ['Cabernet Sauvignon', 'Merlot', 'Pinot Noir', 'Shiraz', 'Malbec', 
       'Zinfandel', 'Grenache', 'Sangiovese', 'Tempranillo', 'Carmenere', 'Nebbiolo', 'Cabernet Franc', 
       'Syrah', 'Lambrusco', 'Red Blends', 'Port', 'Banyus', 'Nero d\'Avola', 'Vin Santo', 'Recioto Della Valpolicella', 
-      'Barbera', 'Bobal', 'Alicante Henri Bouschet', 'Carignan', 'Cisnaut', 'Dolcetto', 'Gamay', 
+      'Barbera', 'Bobal', 'Alicante Henri Bouschet', 'Carignan', 'Cisnault', 'Dolcetto', 'Gamay', 
       'Mourvèdre', 'Brachetto d\'Acqui', 'Primitivo', 'Saperavi', 'Pinotage', 'Montepulciano', 'Ruby Cabernet', 
       'Chardonnay', 'Sauvignon Blanc', 'Riesling', 'Pinot Grigio/Pinot Gris', 'Moscato/Muscat Blanc', 'Pinot Blanc', 
       'Gewürztraminer', 'Viognier', 'Chenin Blanc', 'Albariño', 'Semillon', 'Verdejo', 'Vermentino', 'Grüner Veltliner', 
-      'Torrontés', 'Marsanne', 'Roussane', 'Cortese', 'Arneis', 'Assyrtiko', 'Grenache Blanc/Garnacha Blanca', 
+      'Torrontés', 'Marsanne', 'Roussanne', 'Cortese', 'Arneis', 'Assyrtiko', 'Grenache Blanc/Garnacha Blanca', 
       'Garganega', 'Fiano', 'White Blend' ],
     required: true
   },
