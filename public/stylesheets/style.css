@@ -3,27 +3,27 @@
 body {
     margin: 0;
     font-family: 'Quicksand' serif;
-    background-color: #f9f5f0;
+    background-color: rgb(0, 0, 0);
     color: #2c2c2c;
 }
 
-.container {
+/* .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 5fr;
     grid-template-rows: auto auto;
-    /* grid-template-areas: "hero hero" "info wines"; */
+    grid-template-areas: "hero hero" "info wines";
     gap: 3rem;
     padding: 3rem;
-    max-width: 1200px;
+    max-width: 300px;
     margin: 0 auto;
-}
+} */
 
 .hero {
     grid-area: hero;
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: space-between;
-    background: linear-gradient(to right, #fff0ec, #fbeee6);
+    background: transparent;
     border-radius: 16px;
     padding: 2rem;
 }
@@ -33,20 +33,55 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 3rem;
-    color: #410000;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: #eadab6;
+    margin-bottom: 2rem;
 }
 
+.hero-text h2 {
+    font-size: 2.7rem;
+    color: #eadab6;
+    margin-bottom: 2rem;
+}
 
-/* .index-body {
-    background-image: url('/images/VinoVault-Wines.png');
-    background-size: cover;
+.hero-text p {
+    font-size: 2rem;
+    line-height: 2.2;
+    margin-bottom: 3rem;
+}
+
+.hero-text .btn {
+    background-color: #800000;
+    color: #fff;
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer
+}
+
+.index-body {
+    background-image: url('/images/VinoVault-Wines-wider.png');
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
     min-height: 100vh;
     width: 100vw;
     color: white;
-} */
+    /* margin: 0 */
+}
+
+.authlink {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #eadab6;
+    font-weight: bold;
+}
+
+.authlink:hover {
+    color: rgb(128, 56, 56);
+}
 
 .signin-container,
 .signup-container {
@@ -59,7 +94,7 @@ body {
 }
 
 h1 {
-    color: #7c17e8;  
+    color: #eadab6;  
 }
 
 form {
@@ -68,27 +103,27 @@ form {
     justify-content: space-evenly;
     width: 20em;
     height: 50%;
-    background-color: #f42626;
+    background-color: #eadab6;
     padding: 30px 40px 20px 40px;
     border-radius: 20px;
-    color: rgb(0, 255, 255);
+    color: rgb(46, 46, 46);
     font-weight: bold;
 }
 
 input {
     border: 10px;
-    background-color: rgb(252, 252, 14);
+    background-color: rgb(237, 237, 237);
     padding: 8px;
     border-radius: 10px;
 }
 
 button {
     padding: 10px;
-    background-color: rgb(63, 250, 144);
-    color: black;
+    background-color: rgb(106, 7, 7);
+    color: #eadab6;
     border-radius: 30px;
     border: none;
     margin: 15px 0;
-    font-size: 1.1em;
+    font-size: 2.2em;
 }
 

@@ -11,7 +11,7 @@
 
 #nav-header {
     font-family: 'Pacifico' sans-serif;
-    color: #2c9844;
+    color: #eadab6;
     size: 1em !important;
     margin: 0;
 }
@@ -19,10 +19,10 @@
 .authlink {
     text-decoration: none;
     margin: 0 15px;
-    color: #2bbcc7;
+    color: #eadab6;
     font-weight: bold;
 }
 
 .authlink:hover {
-    color: deeppink;
+    color: rgb(128, 56, 56);
 }
