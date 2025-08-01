@@ -1,16 +1,49 @@
-body {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
+.index-body {
+    background-image: url('/images/Personal-Wine-Cellar.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
     font-family: 'Quicksand' serif;
-    background-color: rgb(0, 0, 0);
-    color: #2c2c2c;
+    margin: 0;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    
 }
 
 .hero {
-    grid-area: hero;
-    display: flex;
-    align-items: right;
-    justify-content: space-between;
-    background: linear-gradient(to right, #fff0ec, #fbeee6);
+    display: grid;
+    position: static;
+    float: right;
+    background: linear-gradient(to right, #eadab6, #eadab6, transparent);
     border-radius: 16px;
     padding: 2rem;
+    margin: 1rem;
+    height: 100%;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.authlink {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #eadab6;
+    font-weight: bold;
+}
+
+.authlink:hover {
+    color: rgb(128, 56, 56);
 }

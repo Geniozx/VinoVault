@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="/stylesheets/vinovault.css" />
     <title>VinoVault</title>
   </head>
-  <body>
+  <body class="index-body">
+    
     <%- include('../partials/_navbar.ejs') %>
-    <h1>VinoVault</h1>
-    <a href="/users/<%= user._id %>/vinos/new">Add a New Wine</a>
+    <div class="hero-text">
+      <h1>VinoVault</h1>
+    </div>
+    <p>
+    <a class="authlink" href="/users/<%= user._id %>/vinos/new">Add a New Wine</a>
+    </p>
     <section class="hero">
       <ul>
         <% wines.forEach((wine)=>{ %> 
@@ -18,5 +23,6 @@
             <% }) %>
           </ul>
         </section>
+      
       </body>
       </html>
