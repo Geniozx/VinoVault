@@ -41,9 +41,12 @@ app.get('/', (req, res) => {
   });
 });
 
+const usersController = require('./controllers/shaina.js')
+
 app.use('/auth', authController);
 const isSignedIn = require('./middleware/is-signed-in.js');
 app.use('/users/:userId/vinos', vinosController);
+app.use('/shaina', usersController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);

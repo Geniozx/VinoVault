@@ -9,6 +9,7 @@
   <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Wine</h1>
+    <section id="hero">
     <form action="/users/<%= user._id %>/vinos" method="POST">
     <label for="name">Wine Name</label>
     <input type="text" name="name" id="name" />
@@ -43,6 +44,7 @@
         <option value="Cabernet Sauvignon">Cabernet Sauvignon</option>
         <option value="Carignan">Carignan</option>
         <option value="Carmenere">Carmenere</option>
+        <option value="Champagne">Champagne</option>
         <option value="Chardonnay">Chardonnay</option>
         <option value="Chenin Blanc">Chenin Blanc</option>
         <option value="Cisnault">Cisnault</option>
@@ -72,6 +74,7 @@
         <option value="Red Blends">Red Blends</option>
         <option value="Recioto Della Valpolicella">Recioto Della Valpolicella</option>
         <option value="Riesling">Riesling</option>
+        <option value="Rose">Rose</option>
         <option value="Roussane">Roussanne</option>
         <option value="Ruby Cabernet">Ruby Cabernet</option>
         <option value="Sangiovese">Sangiovese</option>
@@ -142,5 +145,6 @@
 
     <button type="submit">Add Wine</button>
 </form>
+</section>
   </body>
 </html>

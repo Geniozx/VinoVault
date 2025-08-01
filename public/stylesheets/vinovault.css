@@ -37,13 +37,18 @@ p {
     font-weight: bold;
 }
 
-.authlink {
-    text-decoration: none;
-    margin: 0 15px;
-    color: #eadab6;
-    font-weight: bold;
+li{
+    list-style: none;
 }
 
-.authlink:hover {
-    color: rgb(128, 56, 56);
+.authlinks {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #000000;
+    font-weight: bold;
+    
+}
+
+.authlinks:hover {
+    color: rgb(168, 46, 46);
 }

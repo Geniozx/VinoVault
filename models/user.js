@@ -32,7 +32,7 @@ const vinosSchema = mongoose.Schema ({
       'Chardonnay', 'Sauvignon Blanc', 'Riesling', 'Pinot Grigio/Pinot Gris', 'Moscato/Muscat Blanc', 'Pinot Blanc', 
       'Gewürztraminer', 'Viognier', 'Chenin Blanc', 'Albariño', 'Semillon', 'Verdejo', 'Vermentino', 'Grüner Veltliner', 
       'Torrontés', 'Marsanne', 'Roussanne', 'Cortese', 'Arneis', 'Assyrtiko', 'Grenache Blanc/Garnacha Blanca', 
-      'Garganega', 'Fiano', 'White Blend' ],
+      'Garganega', 'Fiano', 'White Blend', 'Champagne', 'Rose' ],
     required: true
   },
   rating: {

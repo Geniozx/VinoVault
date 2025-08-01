@@ -4,17 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/vinovault.css" />
-    <title>VinoVault</title>
+    <title>Shaina's Visitors</title>
   </head>
   <body class="index-body">
-    
     <%- include('../partials/_navbar.ejs') %>
     <div class="hero-text">
-      <h1>VinoVault</h1>
+      <h1>Pair Your Wine with Your Board</h1>
     </div>
-    <p>
-    <a class="authlink" href="/users/<%= user._id %>/vinos/new">Add a New Wine</a>
-    </p>
     <section class="hero">
       <ul>
         <% wines.forEach((wine)=>{ %> 
@@ -22,7 +18,7 @@
             <%= wine.winery %>, <%= wine.category %></li>
             <% }) %>
           </ul>
-        </section
+        </section>
       
       </body>
       </html>
