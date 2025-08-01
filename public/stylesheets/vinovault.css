@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand' serif;
+    background-color: rgb(0, 0, 0);
+    color: #2c2c2c;
+}
+
+.hero {
+    grid-area: hero;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    background: linear-gradient(to right, #fff0ec, #fbeee6);
+    border-radius: 16px;
+    padding: 2rem;
+}

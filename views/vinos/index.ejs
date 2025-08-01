@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/vinovault.css" />
     <title>VinoVault</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>VinoVault</h1>
     <a href="/users/<%= user._id %>/vinos/new">Add a New Wine</a>
-    <ul>
-<% wines.forEach((wine)=>{ %>
-  
-<a href="/users/<%= user._id %>/vinos/<%= wine._id %>"><li><%= wine.name %> <%= wine.year %></a>, 
-  <%= wine.winery %>, <%= wine.category %>. 
-  <%= wine.type %>, Region: <%= wine.region %>, Rating: <%= wine.rating %>, Notes <%= wine.notes %>, 
-  Flavor Profile: <%= wine.flavorProfile %>
-<% }) %>
-    </ul>
-  </body>
-</html>
+    <section class="hero">
+      <ul>
+        <% wines.forEach((wine)=>{ %> 
+          <a href="/users/<%= user._id %>/vinos/<%= wine._id %>"><li><%= wine.name %> <%= wine.year %></a>, 
+            <%= wine.winery %>, <%= wine.category %>
+            <% }) %>
+          </ul>
+        </section>
+      </body>
+      </html>
