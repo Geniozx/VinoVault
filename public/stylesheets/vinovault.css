@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
 
 .index-body {
-    background-image: url('/images/Personal-Wine-Cellar.png');
+    background-image: url('/images/VinoVault-Personal-Cellar.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -24,7 +24,7 @@
     display: grid;
     position: static;
     float: right;
-    background: linear-gradient(to right, #eadab6, #eadab6, transparent);
+    background: linear-gradient(to right, #eadab6, transparent, #eadab6, transparent);
     border-radius: 16px;
     padding: 2rem;
     margin: 1rem;

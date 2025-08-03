@@ -30,6 +30,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.set('view engine', 'ejs');
 
 const passUserToView = require('./middleware/pass-user-to-view.js');
 app.use(passUserToView);
@@ -41,12 +42,12 @@ app.get('/', (req, res) => {
   });
 });
 
-const usersController = require('./controllers/shaina.js')
+const shainaController = require('./controllers/shaina.js')
 
 app.use('/auth', authController);
 const isSignedIn = require('./middleware/is-signed-in.js');
 app.use('/users/:userId/vinos', vinosController);
-app.use('/shaina', usersController);
+app.use('/shaina', shainaController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);

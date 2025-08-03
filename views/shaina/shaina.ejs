@@ -13,8 +13,8 @@
     </div>
     <section class="hero">
       <ul>
-        <% wines.forEach((wine)=>{ %> 
-          <li><a class="authlinks" href="/users/<%= user._id %>/vinos/<%= wine._id %>"> <%= wine.name %> <%= wine.year %></a> 
+        <% vinos.forEach(wine=>{ %> 
+          <li><%= wine.name %> <%= wine.year %></a> 
             <%= wine.winery %>, <%= wine.category %></li>
             <% }) %>
           </ul>
