@@ -8,6 +8,7 @@
   </head>
   <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
+    <section class="hero">
     <h1><%= vinos.name %> <%= vinos.year %></h1>
     <p><%= vinos.winery %>, <%= vinos.category %>.</p>
     <p><%= vinos.type %>, Region: <%= vinos.region %></p>
@@ -23,6 +24,7 @@
       method="POST" onsubmit="return confirm('Are you sure you want to delete this wine?')">
       <button type="submit">Delete Wine</button>
     </form>
+  </section>
   </body>
 </html>
 

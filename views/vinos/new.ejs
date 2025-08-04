@@ -9,7 +9,7 @@
   <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Wine</h1>
-    <section id="hero">
+    <section class="hero">
     <form action="/users/<%= user._id %>/vinos" method="POST">
     <label for="name">Wine Name</label>
     <input type="text" name="name" id="name" />

@@ -9,6 +9,7 @@
 <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit <%= vinos.name %> <%= vinos.year %></h1>
+    <section class="hero">
     <form action="/users/<%= user._id %>/vinos/<%= vinos._id %>?_method=PUT" method="POST">
     <label for="name">Wine Name</label>
     <input type="text" name="name" id="name" value="<%= vinos.name %>" />
@@ -143,5 +144,6 @@
 
     <button type="submit">Edit Wine</button>
 </form>
+</section>
   </body>
 </html>

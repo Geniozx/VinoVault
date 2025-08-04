@@ -13,10 +13,12 @@
     </div>
     <section class="hero">
       <ul>
-        <% vinos.forEach(wine=>{ %> 
-          <li><%= wine.name %> <%= wine.year %></a> 
-            <%= wine.winery %>, <%= wine.category %></li>
-            <% }) %>
+        <% vinos.forEach(wine => { %> 
+          <li>
+            <strong><%= wine.name %></strong> <%= wine.year %></a> 
+            <%= wine.winery %>, <%= wine.category %> <% if (wine.user) { %> Added by <%= wine.user.username %>
+            <% }}) %>
+          </li>
           </ul>
         </section>
       

@@ -12,3 +12,14 @@
     margin: 0
 }
 
+.hero {
+    display: grid;
+    position: static;
+    float: right;
+    background: linear-gradient(to right, #eadab6, transparent, #eadab6, transparent);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1rem;
+    height: 100%;
+}
+
