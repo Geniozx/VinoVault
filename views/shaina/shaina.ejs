@@ -3,22 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/vinovault.css" />
+    <link rel="stylesheet" href="/stylesheets/shaina.css" />
     <title>Shaina's Visitors</title>
   </head>
   <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
+    
     <div class="hero-text">
       <h1>Pair Your Wine with Your Board</h1>
     </div>
-    <section class="hero">
-      <ul>
-        <% vinos.forEach(wine => { %> 
-          <li>
-            <strong><%= wine.name %></strong> <%= wine.year %></a> 
-            <%= wine.winery %>, <%= wine.category %> <% if (wine.user) { %> Added by <%= wine.user.username %>
-            <% }}) %>
-          </li>
+    <section class="spring-board">
+      <ul><h2>Spring Board</h2>
+          <li><strong>Isle Of Beauty Rosé</strong>, Two Rivers</li>
+            <li><strong>Rose</strong>, Loveblock</li>
+            <li><strong>Sauvignon Blanc</strong>, Oyster Bay</li>
+             <li><strong>Cuvée Gastronome Blanc de Blancs Brut Champagne Premier Cru</strong>, Pierre Gimonnet & Fils</li>
+             <li><strong>Brut N.V.</strong>, Roederer Estate</li>
+          </ul>
+        </section>
+
+        <section class="summer-board">
+          <ul><h2>Summer Board</h2>
+             <li><strong>Village Chardonnay</strong>, Kumeu River</li>
+             <li><strong>Chardonnay Sonoma Coast</strong>, Ramey</li>
+             <li><strong>Grüner Veltliner</strong>, Loimer</li>
+             <li><strong>Federspiel Grüner Veltliner</strong>, Federspiel Grüner Veltliner</li>
+             <li><strong>Bannockburn Pinot Noir</strong>, Felton Road</li>
+             <li><strong>Pinot Noir</strong>, Domaine Drouhin</li>
+          </ul>
+        </section>
+
+        <section class="fall-board">
+          <ul><h2>Fall Board</h2>
+          <li><strong>Malbec</strong>, Catena</li>
+             <li><strong>A Lisa Malbel</strong>, Bodega Noemía</li>
+             <li><strong>Three Valleys Zinfandel</strong>, Ridge Vineyards</li>
+             <li><strong>Juvenile Zinfandel</strong>, Turley</li>
+             <li><strong>Napa Valley Merlot</strong>, Duckhorn</li>
+            <li><strong>Pomerol Merlot</strong>, Château Bonalgue</li>
+          </ul>
+        </section>
+
+        <section class="winter-board">
+          <ul><h2>Winter Board</h2>
+          <li><strong>Méthode Champenoise Brut (Gold Label) N.V.</strong>, Gruet</li>
+             <li><strong>Brut Excellence N.V. Brut</strong>, Scharffenberger</li>
+             <li><strong>Trento Brut N.V.</strong>, Ferrari</li>
+             <li><strong>Cabernet Sauvignon</strong>, Smith & Hook</li>
+             <li><strong>The Montelena Estate Cabernet Sauvignon</strong>, Château Montelena</li>
+             <li><strong>Les Petites Roches Chinon Cabernet Franc</strong>, Charles Joguet</li>
+             <li><strong>Cabernet Franc</strong>, Lang & Reed</li>
+          </ul>
+        </section>
+
+        <section class="gouda-board">
+          <ul><h2>Gouda Board</h2>
+          <li><strong>Pinot Grigio (Selezione)</strong>, Elena Walch</li>
+          <li><strong>Pinot Gris Alsace Réserve</strong>, Trimbach</li>
+          <li><strong>Riesling Kabinett Blue Slate</strong>, Dr. Loosen</li>
+          <li><strong>Riesling Alsace Réserve</strong>, Trimbach</li>
+          
+          </ul>
+        </section>
+
+        <section class="english-cheddar-board">
+          <ul><h2>English Cheddar Board</h2>
+          <li><strong>Village Chardonnay</strong>, Kumeu River</li>
+             <li><strong>Chardonnay Sonoma Coast</strong>, Ramey</li>
+             <li><strong>Sauvignon Blanc</strong>, Oyster Bay</li>
+             <li><strong>Cabernet Sauvignon</strong>, Smith & Hook</li>
+             <li><strong>The Montelena Estate Cabernet Sauvignon</strong>, Château Montelena</li>
+             <li><strong>Three Valleys Zinfandel</strong>, Ridge Vineyards</li>
+             <li><strong>Juvenile Zinfandel</strong>, Turley</li>
+          </ul>
+        </section>
+
+        <section class="black-n-blue-board">
+          <ul><h2>Black & Blue Board</h2>
+          <li><strong>Village Chardonnay</strong>, Kumeu River</li>
+             <li><strong>Chardonnay Sonoma Coast</strong>, Ramey</li>
+             <li><strong>Nero di Lupo Nero d’Avola</strong>, COS</li>
+             <li><strong>Domaine Du Coteau Des Charmes Beaujolais Villages Gamay</strong>, Sylvie et Jean-Luc Dupeuble</li>
+             <li><strong>Malbec</strong>, Catena</li>
+             <li><strong>A Lisa Malbec</strong>, Bodega Noemía</li>
+          </ul>
+        </section>
+
+        <section class="spanish-board">
+          <ul><h2>Spanish Board</h2>
+            <li><strong>Blanc de Blancs</strong>, Raventós i Blanc</li>
+          <li><strong>Colección Albariño Rías Baixas</strong>, Pazo de Señorans</li>
+          <li><strong>Viña Alberdi Reserva Tempranillo</strong>, La Rioja Alta</li>
+          </ul>
+        </section>
+
+        <section class="french-board">
+          <ul><h2>French Board</h2>
+            <li><strong>Isle Of Beauty Rosé</strong>, Two Rivers</li>
+            <li><strong>Rose</strong>, Loveblock</li>
+            <li><strong>Chablis</strong>, Domaine William Fèvre</li>
+            <li><strong>Domaine Sainte Claire Chablis</strong>, Jean-Marc Brocard</li>
+            <li><strong>Haut-Médoc Bordeaux</strong>, Château Lanessan</li>
+            <li><strong>Madame Castillon - Côtes de Bordeaux</strong>, Château de Pitray</li>
+          </ul>
+        </section>
+
+        <section class="us-board">
+          <ul><h2>US Board</h2>
+          <li><strong> Blanc de Noirs N.V.Gruet Sparkling</strong>, Gruet</li>
+          <li><strong>Brut Rosé N.V.</strong>, Gruet</li>
+          <li><strong>Sauvignon Blanc</strong>, Oyster Bay</li>
+          <li><strong>Bannockburn Pinot Noir</strong>, Felton Road</li>
+             <li><strong>Pinot Noir</strong>, Domaine Drouhin</li>
           </ul>
         </section>
       

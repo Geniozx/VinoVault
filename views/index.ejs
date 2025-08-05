@@ -6,13 +6,12 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>VinoVault</title>
   </head>
-  <!-- <body> -->
   <body class="index-body">
     <%- include('./partials/_navbar.ejs') %>
       <section class="hero">
         <div class="hero-text">
           <% if (user) { %>
-            <h1>Welcome to VinoVault, <%= user.username %>!</h1>
+            <h1>Welcome to VinoVault, <h3><%= user.username %>!</h3></h1>
             <p class="nav-links">
               <a class="authlink" href="/auth/sign-out">Sign out</a>
             </p>
