@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: 'Quicksand' serif;
+    font-family: 'Pacifico' serif;
     background-color: rgb(0, 0, 0);
     color: #2c2c2c;
 }
@@ -121,4 +121,101 @@ button {
     color: rgb(128, 56, 56);
     margin-bottom: 1rem;
     margin-top: -2rem;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text h3 {
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .hero-text .btn {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .index-body {
+        background-size: contain;
+        background-position: top center;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 1.5em;
+    }
+
+    .authlink {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .hero-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.6rem;
+    }
+
+    .hero-text .btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    button {
+        font-size: 2em;
+    }
 }
