@@ -32,3 +32,22 @@ h1{
 p {
     font-weight: bold;
 }
+
+button {
+    background-color: #602e2e;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin: 1rem;
+}
+
+button:hover {
+    background-color: #d8c073;
+    transform: scale(1.05);
+}
